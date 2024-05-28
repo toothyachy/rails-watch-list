@@ -1,6 +1,9 @@
-<div style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path @list.image_url.key %>'); background-size: cover; background-position: center; height: 250px" class="d-flex justify-content-center align-items-center bg-opacity-75">
+
+<div style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path(@list.image_url.key) %>'); background-size: cover; background-position: center; height: 250px" class="d-flex justify-content-center align-items-center bg-opacity-75">
   <h1 class="text-light fs-1 fw-bold"><%= @list.name %></h1>
 </div>
+
+<%= image_tag(@list.image_url.key) %>
 
 <div class="container d-flex justify-content-center mt-3">
   <div class="col-10">
@@ -24,6 +27,7 @@
           </div>
         </div>
       <% end %>
+
     </div>
   </div>
 </div>
